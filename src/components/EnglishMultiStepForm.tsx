@@ -76,6 +76,8 @@ export default function EnglishMultiStepForm() {
   const [form, setForm] = useState(initialState)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [prefillPostcode, setPrefillPostcode] = useState<string>('')
+  const [shouldSkipPostcodeStep, setShouldSkipPostcodeStep] = useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
   const { token: csrfToken } = useCSRF()
@@ -93,6 +95,8 @@ export default function EnglishMultiStepForm() {
     // Check for postcode in URL parameters
     const postcodeFromUrl = searchParams.get('postcode')
     if (postcodeFromUrl && postcodeFromUrl.length === 4) {
+      setPrefillPostcode(postcodeFromUrl)
+      setShouldSkipPostcodeStep(true)
       setForm(prev => ({ ...prev, postcode: postcodeFromUrl }))
 
       // Track PLZ prefill from URL
@@ -249,19 +253,38 @@ export default function EnglishMultiStepForm() {
   const handleNext = (e?: React.FormEvent) => {
     if (e) e.preventDefault()
     setError('')
-    
+
     // Validation per step
     if (step === 1 && !form.student) return setError('Please select an option.')
     if (step === 2 && !form.grade) return setError('Please select or enter a grade/level.')
     if (step === 3 && !form.subject) return setError('Please enter the tutoring subject.')
     if (step === 4 && !form.postcode) return setError('Please enter your postcode.')
-    
-    setStep(step + 1)
+
+    // Skip postcode step if pre-filled and moving from step 3 to 4
+    if (step === 3 && shouldSkipPostcodeStep && form.postcode) {
+      // Track postcode step skip
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'postcode_step_skipped', {
+          'event_category': 'Lead Form',
+          'event_label': 'Skipped postcode step (pre-filled)',
+          'postcode_value': form.postcode
+        })
+      }
+      setStep(5) // Skip to contact details
+    } else {
+      setStep(step + 1)
+    }
   }
 
   const handleBack = () => {
     setError('')
-    setStep(step - 1)
+
+    // Skip back over postcode step if it was pre-filled
+    if (step === 5 && shouldSkipPostcodeStep && form.postcode) {
+      setStep(3) // Go back to step 3 (subject selection)
+    } else {
+      setStep(step - 1)
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -532,13 +555,28 @@ export default function EnglishMultiStepForm() {
           <h2 className="text-2xl font-bold mb-6 text-gray-900">
             Where do you live?
           </h2>
-          
+
+          {prefillPostcode && (
+            <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+              <div className="flex items-center">
+                <svg className="h-5 w-5 text-green-600 mr-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p className="text-green-800 font-medium">Postal Code taken: {prefillPostcode}</p>
+              </div>
+            </div>
+          )}
+
           <label className="block text-gray-700 mb-2">Swiss Postal Code</label>
-          <input 
-            name="postcode" 
-            value={form.postcode} 
+          <input
+            name="postcode"
+            value={form.postcode}
             onChange={handleChangeWithAutoAdvance}
-            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#059669] focus:outline-none text-gray-700"
+            className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none text-gray-700 ${
+              prefillPostcode
+                ? 'border-green-500 bg-green-50 focus:border-green-600'
+                : 'border-gray-300 focus:border-[#059669]'
+            }`}
             placeholder="e.g., 8001"
             maxLength={4}
           />
