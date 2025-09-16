@@ -134,7 +134,7 @@ export default function DeutscheNachhilfe() {
                 Unsere bewährte 6-Schritte-Methodik
               </h2>
               <p className="text-lg text-gray-600">
-                Mit über 7'000 erfolgreichen Nachhilfe-Lehrern in der ganzen Schweiz haben wir eine Methodik entwickelt, die aus der Abwärtsspirale eine Erfolgsspirale macht.
+                Mit über 7&apos;000 erfolgreichen Nachhilfe-Lehrern in der ganzen Schweiz haben wir eine Methodik entwickelt, die aus der Abwärtsspirale eine Erfolgsspirale macht.
               </p>
               <button
                 onClick={() => router.push('/lehrer-finden')}
@@ -243,11 +243,11 @@ export default function DeutscheNachhilfe() {
 
             <div className="space-y-6 text-lg text-gray-700 text-left">
               <p>
-                Über 15'000 Schüler haben mit TutorGo bereits den Weg aus der 3-Phasen-Abwärtsspirale gefunden. Unsere bewährte 6-Schritte-Methodik verwandelt Lernfrust in Lernerfolg und macht aus schwachen Schülern selbstbewusste Lernende.
+                Über 15&apos;000 Schüler haben mit TutorGo bereits den Weg aus der 3-Phasen-Abwärtsspirale gefunden. Unsere bewährte 6-Schritte-Methodik verwandelt Lernfrust in Lernerfolg und macht aus schwachen Schülern selbstbewusste Lernende.
               </p>
 
               <p>
-                Mit über 7'000 qualifizierten Nachhilfe-Lehrern in der ganzen Schweiz finden wir für jeden Schüler den passenden Lehrer. Ob zuhause oder online - wir bringen den Erfolg direkt zu Ihnen.
+                Mit über 7&apos;000 qualifizierten Nachhilfe-Lehrern in der ganzen Schweiz finden wir für jeden Schüler den passenden Lehrer. Ob zuhause oder online - wir bringen den Erfolg direkt zu Ihnen.
               </p>
 
               <p>

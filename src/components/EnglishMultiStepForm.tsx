@@ -164,7 +164,7 @@ export default function EnglishMultiStepForm() {
         })
       }
     }
-  }, []) // Only run on mount
+  }, [searchParams]) // Include searchParams dependency
   
   // Track step changes
   useEffect(() => {
