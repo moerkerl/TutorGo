@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import LPHero from '@/components/LPHero'
+import LPHeroWithPLZ from '@/components/LPHeroWithPLZ'
 import LPBenefits from '@/components/LPBenefits'
 import LPSection from '@/components/LPSection'
 import LPSteps from '@/components/LPSteps'
@@ -81,21 +81,22 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero Section */}
-      <LPHero
+      {/* Hero Section with PLZ Input */}
+      <LPHeroWithPLZ
         title={
           <>
-            <span className="inline-block">Your personal</span>{' '}
+            <span className="inline-block">Find the</span>{' '}
             <span className="inline-block">
-              <AnimatedText text="selection of tutors" />
-            </span>
+              <AnimatedText text="perfect tutor" />
+            </span>{' '}
+            <span className="inline-block">for your child</span>
           </>
         }
         subtitle="Answer a few questions and receive immediate tutor suggestions from your region."
         buttonText="Find Your Tutor Now"
         imageSrc="/images/Beratungsgespräch_im_modernen_Büro_20250318_192326.jpg"
         imageAlt="Professional consultation - Expert explaining learning concept in modern office"
-        onButtonClick={() => router.push('/find-tutor')}
+        isEnglish={true}
       />
 
       {/* Benefits */}

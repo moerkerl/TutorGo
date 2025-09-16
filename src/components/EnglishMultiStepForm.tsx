@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useCSRF, addCSRFHeader } from '@/hooks/useCSRF'
 import { useTrackingParams } from '@/hooks/useTrackingParams'
 
@@ -77,6 +77,7 @@ export default function EnglishMultiStepForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const router = useRouter()
+  const searchParams = useSearchParams()
   const { token: csrfToken } = useCSRF()
   const { trackingParams, gclid, utmParams } = useTrackingParams()
   
@@ -87,12 +88,27 @@ export default function EnglishMultiStepForm() {
   const stepsVisitedRef = useRef<Set<number>>(new Set([1]))
   const currentStepRef = useRef<number>(1)
   
-  // Initialize session tracking on mount
+  // Initialize session tracking and PLZ from URL on mount
   useEffect(() => {
+    // Check for postcode in URL parameters
+    const postcodeFromUrl = searchParams.get('postcode')
+    if (postcodeFromUrl && postcodeFromUrl.length === 4) {
+      setForm(prev => ({ ...prev, postcode: postcodeFromUrl }))
+
+      // Track PLZ prefill from URL
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'form_plz_prefilled', {
+          'event_category': 'Lead Form',
+          'event_label': 'PLZ prefilled from URL',
+          'plz_value': postcodeFromUrl
+        })
+      }
+    }
+
     // Copy initial ref values to avoid stale closure warnings
     const initialFormStartTime = Date.now()
     formStartTimeRef.current = initialFormStartTime
-    
+
     // Generate or retrieve session ID
     let sessionId = sessionStorage.getItem('form_session_id_en')
     if (!sessionId) {
