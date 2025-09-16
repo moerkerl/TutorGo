@@ -87,7 +87,7 @@ export default function DeutscheNachhilfe() {
           <>
             <span className="inline-block">Finden Sie den</span>{' '}
             <span className="inline-block">
-              <AnimatedText text="perfekten Nachhilfe-Lehrer" />
+              <AnimatedText text="perfekten Lehrer" />
             </span>{' '}
             <span className="inline-block">für Ihr Kind</span>
           </>
