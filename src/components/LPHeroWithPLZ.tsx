@@ -49,7 +49,7 @@ export default function LPHeroWithPLZ({
       onButtonClick(plz || undefined)
     } else {
       // Navigate to form page with PLZ parameter if provided
-      const formPath = isEnglish ? '/find-tutor' : '/de/tutor-finden'
+      const formPath = isEnglish ? '/find-tutor' : '/lehrer-finden'
       const paramName = isEnglish ? 'postcode' : 'plz'
       const targetUrl = plz ? `${formPath}?${paramName}=${plz}` : formPath
       router.push(targetUrl)
@@ -78,7 +78,7 @@ export default function LPHeroWithPLZ({
           if (onButtonClick) {
             onButtonClick(value)
           } else {
-            const formPath = isEnglish ? '/find-tutor' : '/de/tutor-finden'
+            const formPath = isEnglish ? '/find-tutor' : '/lehrer-finden'
             const paramName = isEnglish ? 'postcode' : 'plz'
             router.push(`${formPath}?${paramName}=${value}`)
           }
