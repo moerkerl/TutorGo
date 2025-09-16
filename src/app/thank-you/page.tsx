@@ -9,7 +9,7 @@ export default function ThankYouPage() {
     // Track page view
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
       window.gtag('event', 'page_view', {
-        page_title: 'Thank You Page - Notenmeister',
+        page_title: 'Thank You Page - TutorGo',
         page_location: window.location.href
       })
     }
@@ -137,10 +137,10 @@ export default function ThankYouPage() {
 
           {/* Trust Building Section */}
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            {/* Why Notenmeister */}
+            {/* Why TutorGo */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl font-bold mb-6 text-gray-900">
-                Why Notenmeister?
+                Why TutorGo?
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -243,8 +243,8 @@ export default function ThankYouPage() {
                 <div className="bg-white rounded-lg p-6">
                   <div className="text-3xl mb-3">✉️</div>
                   <h3 className="font-semibold mb-2">By Email</h3>
-                  <a href="mailto:info@notenmeister.ch" className="text-[#059669] font-bold hover:text-[#047857]">
-                    info@notenmeister.ch
+                  <a href="mailto:info@tutorgo.ch" className="text-[#059669] font-bold hover:text-[#047857]">
+                    info@tutorgo.ch
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Response within 24h</p>
                 </div>

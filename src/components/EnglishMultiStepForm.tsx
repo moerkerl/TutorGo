@@ -317,7 +317,7 @@ export default function EnglishMultiStepForm() {
         email: form.email,
         // Language marker for HubSpot
         language: 'english',
-        utm_website_contact: 'notenmeister.ch/en',
+        utm_website_contact: 'tutorgo.ch',
         // Add tracking parameters for attribution
         gclid: gclid || undefined,
         ...utmParams,

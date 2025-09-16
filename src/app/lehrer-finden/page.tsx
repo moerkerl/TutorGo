@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import MultiStepForm from '@/components/MultiStepForm'
 
 export const metadata = {
-  title: 'Nachhilfe-Lehrer finden - Notenmeister',
+  title: 'Nachhilfe-Lehrer finden - TutorGo',
   description: 'Finden Sie den passenden Nachhilfe-Lehrer für bessere Noten und mehr Selbstvertrauen.',
 }
 

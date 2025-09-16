@@ -8,7 +8,7 @@ export default function DankesseitePageComp() {
     // Track page view
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
       window.gtag('event', 'page_view', {
-        page_title: 'Dankesseite - Notenmeister',
+        page_title: 'Dankesseite - TutorGo',
         page_location: window.location.href
       })
     }
@@ -97,7 +97,7 @@ export default function DankesseitePageComp() {
                 
                 <div className="flex items-center space-x-2">
                   <span className="text-[#059669]">✉️</span>
-                  <span className="text-sm font-medium text-gray-900">info@notenmeister.ch</span>
+                  <span className="text-sm font-medium text-gray-900">info@tutorgo.ch</span>
                 </div>
               </div>
             </div>

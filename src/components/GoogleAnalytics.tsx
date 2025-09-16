@@ -4,7 +4,7 @@ import Script from 'next/script';
 import { useEffect } from 'react';
 import { initializeTracking } from '@/lib/tracking';
 
-const GA_ADS_ID = 'AW-11550867447'; // Google Ads ID für notenmeister
+const GA_ADS_ID = 'AW-17574027018'; // Google Ads ID für TutorGo
 
 export default function GoogleAnalytics() {
   useEffect(() => {

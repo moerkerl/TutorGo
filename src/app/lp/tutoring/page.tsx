@@ -51,12 +51,12 @@ export default function EnglishTutoringPage() {
   const testimonials = [
     {
       name: 'The Williams Family from Bern',
-      text: 'Thanks to Notenmeister, our son has rediscovered his joy of learning. The 3-phase methodology really worked - the downward spiral became a success spiral. We can only recommend Notenmeister.',
+      text: 'Thanks to TutorGo, our son has rediscovered his joy of learning. The 3-phase methodology really worked - the downward spiral became a success spiral. We can only recommend TutorGo.',
       rating: 5
     },
     {
       name: 'The Thompson Family from Zurich',
-      text: 'The 6-step method from Notenmeister helped our daughter overcome her learning blocks. She is now more confident and her grades have improved significantly.',
+      text: 'The 6-step method from TutorGo helped our daughter overcome her learning blocks. She is now more confident and her grades have improved significantly.',
       rating: 5
     }
   ]
@@ -126,7 +126,7 @@ export default function EnglishTutoringPage() {
             {/* Left Column - Title, Subtitle, Button */}
             <div className="space-y-6">
               <p className="text-[#059669] font-semibold uppercase tracking-wide text-sm">
-                The Notenmeister Solution
+                The TutorGo Solution
               </p>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
                 Our proven 6-step methodology
@@ -200,7 +200,7 @@ export default function EnglishTutoringPage() {
       {/* Success Section */}
       <LPSection
         title="Success stories speak for themselves"
-        content="From downward spiral to success spiral - see for yourself how Notenmeister has changed the lives of students and families."
+        content="From downward spiral to success spiral - see for yourself how TutorGo has changed the lives of students and families."
         buttonText="Find Your Tutor Now"
         imageSrc="/images/Gemeinsames_Lernen_am_Küchentisch_20250318_192448_Mutter_Tochter.jpg"
         imageAlt="Mother and daughter successfully learning together at the kitchen table"
@@ -240,7 +240,7 @@ export default function EnglishTutoringPage() {
             
             <div className="space-y-6 text-lg text-gray-700 text-left">
               <p>
-                Over 15,000 students have already found their way out of the 3-phase downward spiral with Notenmeister. Our proven 6-step methodology transforms learning frustration into learning success and turns weak students into confident learners.
+                Over 15,000 students have already found their way out of the 3-phase downward spiral with TutorGo. Our proven 6-step methodology transforms learning frustration into learning success and turns weak students into confident learners.
               </p>
               
               <p>

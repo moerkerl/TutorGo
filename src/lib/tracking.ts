@@ -1,4 +1,4 @@
-// Simplified tracking utilities for notenmeister
+// Simplified tracking utilities for TutorGo
 // Based on nachhilfeportal-zuerich implementation
 
 interface TrackingParams {
@@ -113,7 +113,7 @@ export function sendTrackingToGoogleAnalytics(): void {
     if (trackingData.params.utm_term) config.campaign_term = trackingData.params.utm_term;
     if (trackingData.params.utm_content) config.campaign_content = trackingData.params.utm_content;
     
-    window.gtag('config', 'AW-11550867447', config);
+    window.gtag('config', 'AW-17574027018', config);
     
     console.log('Tracking parameters sent to Google Analytics:', config);
   } catch (error) {

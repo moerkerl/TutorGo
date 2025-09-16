@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import EnglishMultiStepForm from '@/components/EnglishMultiStepForm'
 
 export const metadata = {
-  title: 'Find Your Tutor - Notenmeister',
+  title: 'Find Your Tutor - TutorGo',
   description: 'Find the perfect tutor for better grades and more self-confidence.',
 }
 

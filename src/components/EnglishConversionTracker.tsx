@@ -3,10 +3,10 @@
 import { useEffect, useRef } from 'react'
 import { getStoredTrackingParams, getGoogleClickId } from '@/lib/tracking'
 
-// Use the same Google Ads ID as the German version
-const GA_ADS_ID = 'AW-11550867447'
-// Use the same conversion label as German version (or create a new one for English if needed)
-const ENGLISH_CONVERSION_LABEL = 'd9xmCILN1YgbEPf_8IMr'
+// Google Ads ID for TutorGo
+const GA_ADS_ID = 'AW-17574027018'
+// Conversion label for TutorGo lead forms
+const ENGLISH_CONVERSION_LABEL = '296eCMzh6psbEIq--btB'
 
 export default function EnglishConversionTracker() {
   const hasInitialized = useRef(false)

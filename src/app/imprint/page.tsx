@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Imprint - TutorGo',
-  description: 'TutorGo Imprint - Legal information and contact details',
+  description: 'Imprint and contact details of TutorGo - Bildungsinstitut Fokus AG',
 }
 
 export default function Imprint() {
@@ -12,11 +12,12 @@ export default function Imprint() {
 
           <div className="space-y-8">
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Company Information</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Website Operator</h2>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="mb-2"><strong>Bildungsinstitut Fokus AG</strong></p>
-                <p className="mb-2">Musterstrasse 123</p>
-                <p className="mb-2">8000 Zurich</p>
+                <p className="mb-2"><strong>TutorGo</strong></p>
+                <p className="mb-2">Bildungsinstitut Fokus AG</p>
+                <p className="mb-2">Staffelstr 8</p>
+                <p className="mb-2">8045 Zurich</p>
                 <p className="mb-2">Switzerland</p>
               </div>
             </section>
@@ -24,69 +25,63 @@ export default function Imprint() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact</h2>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="mb-2">
-                  <strong>Phone:</strong> 078 314 62 65
-                </p>
-                <p className="mb-2">
-                  <strong>Email:</strong> <a href="mailto:info@tutorgo.ch" className="text-[#059669] hover:text-[#047857] underline">info@tutorgo.ch</a>
-                </p>
-                <p className="mb-2">
-                  <strong>Website:</strong> <a href="https://www.tutorgo.ch" className="text-[#059669] hover:text-[#047857] underline">www.tutorgo.ch</a>
-                </p>
+                <p><strong>Email:</strong> dantico@fokus-nachhilfe.ch</p>
+                <p><strong>Support Hotline:</strong> 078 314 62 65</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Management Board</h2>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <p><strong>Executive Management:</strong></p>
+                <p>Giuseppe D&apos;Antico</p>
+                <p>Liam Mörker</p>
+                <p>Ciril Bullinger</p>
               </div>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Commercial Register</h2>
-              <div className="space-y-2">
+              <div className="bg-gray-50 p-6 rounded-lg">
                 <p><strong>Company Name:</strong> Bildungsinstitut Fokus AG</p>
                 <p><strong>Legal Form:</strong> Stock Corporation (AG)</p>
                 <p><strong>Registered Office:</strong> Zurich, Switzerland</p>
-                <p><strong>Commercial Register Number:</strong> CHE-123.456.789</p>
+                <p><strong>Commercial Register:</strong> Commercial Register of the Canton of Zurich</p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Board of Directors</h2>
-              <div className="space-y-2">
-                <p>Board of Directors of Bildungsinstitut Fokus AG</p>
-                <p>Musterstrasse 123</p>
-                <p>8000 Zurich</p>
-                <p>Switzerland</p>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">VAT Information</h2>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <p><strong>VAT Number:</strong> CHE-123.456.789 MWST</p>
               </div>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">VAT Number</h2>
-              <p>CHE-123.456.789 MWST</p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Responsible for Content</h2>
-              <div className="space-y-2">
-                <p>According to § 55 para. 2 RStV:</p>
-                <p><strong>Bildungsinstitut Fokus AG</strong></p>
-                <p>Musterstrasse 123</p>
-                <p>8000 Zurich</p>
-                <p>Switzerland</p>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <p>Giuseppe D&apos;Antico</p>
+                <p>Bildungsinstitut Fokus AG</p>
+                <p>Staffelstr 8</p>
+                <p>8045 Zurich</p>
+                <p>Email: dantico@fokus-nachhilfe.ch</p>
               </div>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Disclaimer</h2>
-
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-medium text-gray-900 mb-2">Liability for Content</h3>
+                  <h3 className="text-xl font-medium text-gray-900 mb-2">Content Liability</h3>
                   <p>
-                    The contents of our pages were created with great care. However, we cannot guarantee the accuracy, completeness, and timeliness of the content. As a service provider, we are responsible for our own content on these pages according to general laws. However, as a service provider, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.
+                    The contents of our pages were created with great care. However, we cannot guarantee the accuracy, completeness, and timeliness of the content. As a service provider, we are responsible for our own content on these pages in accordance with general laws. However, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-medium text-gray-900 mb-2">Liability for Links</h3>
                   <p>
-                    Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the content of the linked pages.
+                    Our offer contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking.
                   </p>
                 </div>
 
@@ -100,12 +95,19 @@ export default function Imprint() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Dispute Resolution</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Privacy Policy</h2>
               <p>
-                The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr" className="text-[#059669] hover:text-[#047857] underline">https://ec.europa.eu/consumers/odr</a>
+                The use of our website is generally possible without providing personal data. Insofar as personal data (e.g., name, address, or email addresses) is collected on our pages, this is always done on a voluntary basis as far as possible. This data will not be passed on to third parties without your express consent.
               </p>
-              <p className="mt-2">
-                We are not willing or obligated to participate in dispute resolution proceedings before a consumer arbitration board.
+              <p className="mt-4">
+                For more information about privacy, please see our <a href="/privacy" className="text-[#059669] hover:text-[#047857] underline">Privacy Policy</a>.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Applicable Law and Jurisdiction</h2>
+              <p>
+                Swiss law applies exclusively. The place of jurisdiction is Zurich, Switzerland.
               </p>
             </section>
           </div>
